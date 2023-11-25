@@ -1,9 +1,33 @@
-import "./header.css"
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import SplitButton from 'react-bootstrap/SplitButton';
 
-export default function Header() {
-    return (
-        <div className="header">
-            <p>Aqui está o meu header testeeeeeeeeeeeeeeeeee</p>
-        </div>
-    )
+function MenuAlignResponsiveExample() {
+  return (
+    <>
+      <div>
+        <DropdownButton
+          align={{ lg: 'end' }}
+          title="Left-aligned but right aligned when large screen"
+          id="dropdown-menu-align-responsive-1"
+          className='test-start'
+        >
+          <Dropdown.Item eventKey="1">Action 1</Dropdown.Item>
+          <Dropdown.Item eventKey="2">Action 2</Dropdown.Item>
+        </DropdownButton>
+      </div>
+      <div className="mt-2">
+        <SplitButton
+          align={{ lg: 'start' }}
+          title="Right-aligned but left aligned when large screen"
+          id="dropdown-menu-align-responsive-2"
+        >
+          <Dropdown.Item eventKey="1">Action 1</Dropdown.Item>
+          <Dropdown.Item eventKey="2">Action 2</Dropdown.Item>
+        </SplitButton>
+      </div>
+    </>
+  );
 }
+
+export default MenuAlignResponsiveExample;
